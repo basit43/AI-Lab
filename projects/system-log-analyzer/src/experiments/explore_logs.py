@@ -16,6 +16,7 @@ def exploreData(df):
     print("Unique event types:", df['EventId'].nunique())
     print("Event type distribution:")
     print(df['EventId'].value_counts())
+    print("Unique log levels:", df['Level'].nunique())
     # Plotting the distribution of event types
     plt.figure(figsize=(10, 6))
     df['EventId'].value_counts().plot(kind='bar')
@@ -25,7 +26,8 @@ def exploreData(df):
     plt.show()
 
 def visualize_levels(df):
-    df['level'].value_counts().plot(kind='bar')
+    print("Log level distribution:")
+    df['Level'].value_counts().plot(kind='bar')
     plt.title("Log Level Distribution")
     plt.xlabel("Log Level")
     plt.ylabel("Count")
