@@ -9,6 +9,7 @@ def loadData():
     return df
 
 def exploreData(df):
+    print("Exploring the dataset...")
     print("Dataframe shape:", df.shape)
     print("Columns:", df.columns)
     print("First 5 rows:")
@@ -26,6 +27,7 @@ def exploreData(df):
     plt.show()
 
 def visualize_levels(df):
+    print("visulizing log levels...")
     print("Log level distribution:")
     df['Level'].value_counts().plot(kind='bar')
     plt.title("Log Level Distribution")
